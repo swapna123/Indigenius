@@ -1,0 +1,17 @@
+#header { width: 1000px; margin: 0 auto; }
+#header-left { float: left; margin-right: 10px; width: 470px;}
+#header-right { float: left; margin-right: 10px; margin-right: 0; width: 470px; }
+#menu { width: 1000px; margin: 0 auto; }
+#menu-inner { float: left; margin-right: 10px; margin-right: 0; width: 1000px; margin: 0; }
+#banner { width: 1000px; margin: 0 auto; }
+#banner-inner { float: left; margin-right: 10px; margin-right: 0; width: 1000px; margin: 0; }
+#content { width: 1000px; margin: 0 auto; }
+#content-left { float: left; margin-right: 10px; width: 310px; }
+#content-center { float: left; margin-right: 10px; width: 310px; }
+#content-right { float: left; margin-right: 10px; margin-right: 0; width: 310px; }
+#footer { width: 1000px; margin: 0 auto; }
+#footer-left { float: left; margin-right: 10px; width: 470px; }
+#footer-right { float: left; margin-right: 10px; margin-right: 0; width: 500px; } 
+#container { width: 1000px; margin: 0 auto; }
+#container-left { float: left; margin-right: 10px; width: 590px;   }
+#container-right { float: left; margin-right: 10px; margin-right: 0; width: 350px; } 

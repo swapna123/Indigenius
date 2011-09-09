@@ -1,0 +1,27 @@
+<div id='content'>
+  <div id='content-inner'>
+<h1>Listing Testimonials</h1>
+
+<table >
+  <tr>
+    <th align="left"><h4>Content</h4></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @testimonial.each do |testimonial| %>
+  <tr>
+    <td><%= testimonial.clientword %></td>
+    <td><%= link_to 'Show', testimonial %></td>
+    <td><%= link_to 'Edit', edit_testimonial_path(testimonial) %></td>
+    <td><%= link_to 'Destroy', testimonial, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Testimonial', new_testimonial_path %>
+</div>
+</div>

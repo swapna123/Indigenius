@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<body bgcolor="#03A89E">
+<%= stylesheet_link_tag 'indigenius.css' %>
+<div id='header'>
+  <div id='header-left'>
+      <%= image_tag 'logo.png' , :alt => 'Indigenius logo' , :title => 'Indigenius' %>
+  </div>
+  <div id='header-right'>
+      <%= link_to 'Home' , home_index_path %>   |   <%= link_to 'News&Updates' , new_index_news_index_path %>    |    <%= link_to 'Careers' , home_careers_path %>    |    <%= link_to 'Contact Us' , home_contact_us_path %>  |   <%= link_to 'Login' , new_login_path %>
+  </div>
+</div>
+<div>
+</div>
+<div id='menu'>
+  <div id='menu-inner'>
+      <%= link_to 'Services' , service_index_path %> | <%= link_to 'Technologies' , technologies_index_path%> | <%= link_to 'Solutions' , solutions_index_path %> | <%= link_to 'CaseStudies' , casestudies_index_path %> | <%= link_to 'About Us' , aboutus_index_path %>
+  </div>
+</div>
+
+<% flash.each do |key, msg| %>
+     <%=content_tag :div, msg, :id =>"flash_#{key}" %>
+<% end %>
+
+<%= yield %>
+<br /><br /><br />
+<div id='footer'>
+  <div id='footer-left'>
+      Copyright © 2011-12 Indigenius IT Solutions Private Limited. All rights reserved.
+  </div>
+  <div id='footer-right'>
+      <%= link_to 'Feedback' , home_feedback_path %>  |  <%= link_to 'SiteMap' , home_sitemap_path %>  |  <%= link_to 'Disclaimer' , home_disclaimer_path %> |  <%= link_to 'Privacy Policy' , home_privacy_policy_path %>  |  <%= link_to 'Contact Us' , home_contact_us_path %> 
+  </div>
+</div> 
+</body>
+</html>

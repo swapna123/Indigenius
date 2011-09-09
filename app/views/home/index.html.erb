@@ -1,0 +1,55 @@
+<div id='banner'>
+  <div id='banner-inner' style="margin: 32px 40px 1px;">
+      <%#= image_tag 'home.png' , :alt => 'Indigenius Home' , :title => 'Indigenius' %>
+
+
+<%= javascript_include_tag "jquery-1.6.1.min.js","jquery.nivo.slider.pack.js" %>
+<%= stylesheet_link_tag 'default','pascal','orman','nivo-slider' %>
+ 
+
+ 
+    <div id="wrapper">
+    
+
+        <div class="slider-wrapper theme-default" style="width:90%;">
+            <div class="ribbon"></div>
+            <div id="slider" class="nivoSlider">
+                <img src="/images/enterprise.png" alt="" />
+                <img src="/images/consulting.png" alt="" />
+                <img src="/images/outsource.png" alt="" />
+                <img src="/images/portal.png" alt="" title="#htmlcaption" />
+            </div>
+            
+        </div>
+
+    </div>
+    
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+ 
+
+
+
+
+  </div>
+</div>
+<div id='content'  >
+  <div id='content-left'  style="margin: 55px 4px 1px 1px;">
+      <h4>Latest Updates</h4> 
+       <%= @latest_news.content %>
+  </div>
+  <div id='content-center' style="margin: 55px 1px 5px 55px;">
+      <h4>A Word From Our Client</h4> 
+      <%= @latest_testimonial.clientword %>
+  </div>
+  <div id='content-right' style="margin: 55px 1px 21px 4px;">
+     <%= render "layouts/mail_form" %>
+  
+</div>
+
+</div>
+
+

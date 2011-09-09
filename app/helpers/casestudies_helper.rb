@@ -1,0 +1,2 @@
+module CasestudiesHelper
+end

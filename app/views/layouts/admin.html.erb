@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Indigenius</title>
+<%= stylesheet_link_tag 'admin.css' %>
+<div id='header'>
+  <div id='header-inner'>
+   <% flash.each do |key, msg| %>
+     <%=content_tag :div, msg, :id =>"flash_#{key}" %>
+<% end %>
+  </div>
+</div>
+</head>
+<body bgcolor="#00EEEE">
+<div id='menu'>
+  <div id='menu-inner'>
+    <%= link_to 'Create News item', new_news_path %> |
+<%= link_to 'Create Testimonial', new_testimonial_path %> |
+<%= link_to 'Logout' , logout_login_index_path %> <br />
+  </div>
+</div>
+<%= yield %>
+</div> 
+</body>
+</html>

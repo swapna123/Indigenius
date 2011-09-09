@@ -1,0 +1,26 @@
+<div id="banner">
+<div id="banner-inner">
+<%= image_tag 'News_updates.png' , :alt => 'Indigenius Updates' , :title => 'Indigenius' %>
+</div>
+</div>
+<div id="container">
+  <div id="container-left">
+ <h4>The News and Update Content Here</h4>
+<% @latest_news.each do |item| %>
+   <%= item.content %><br /><br />
+<% end %>
+  </div>
+<div id="container-right">
+<h4>Relevant Links </h4>
+<%= link_to 'MS SharePoint Services' , service_sharepoint_services_path%><br />
+<%= link_to 'Web Application Development' , service_webapplication_development_path%><br />
+<%= link_to 'Outsourced Product Development' , service_product_development_path%><br />
+<%= link_to 'OpenSource Customizations' , service_opensource_customizations_path %><br />
+<%= link_to 'Value-added Staff Augmentation' , service_staff_augmentation_path %><br />
+<%= link_to 'Value-added Reselling' , service_reselling_path %> | <%= params[:action] %><br />
+<h4>A Word From Our Client</h4> 
+<%= @latest_testimonial.clientword %>
+<%= render 'layouts/mail_form' %>
+</div>
+</div>
+

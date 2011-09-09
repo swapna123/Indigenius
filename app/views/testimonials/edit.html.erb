@@ -1,0 +1,14 @@
+<div id='content'>
+  <div id='content-inner'>
+
+<%= form_for(:testimonial,:url => {:action => "update"}) do |f|%>
+  <%= f.label :CilentWord %>
+  <%= f.text_field :clientword %><br/>
+
+  <%= f.submit "update"  %><br /></br />
+<% end %>
+
+
+
+<%= link_to 'Show', @testimonial %> |
+<%= link_to 'Back', testimonials_path %></div></div>

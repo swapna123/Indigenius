@@ -1,0 +1,11 @@
+<div id='content'>
+  <div id='content-inner'>
+   <%= form_for(:administrator,:url => {:controller => "login",:action => "create"}) do |f|%>
+  <%= f.label :Username %>
+  <%= f.text_field :username %><br/>
+<%= f.label :Password  %>
+  <%= f.password_field :password %><br />
+  <%= f.submit "Login" %><br /></br />
+<% end %>
+</div>
+

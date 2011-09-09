@@ -1,0 +1,8 @@
+ <h4>Want us to get in touch</h4>
+Please leave your contact details</br> and we will get back to you soon!
+
+<%= form_tag("/home/process_email" , :method => "post") do %>
+  
+  <%= text_field_tag(:email) %>
+  <%= submit_tag("Go") %>
+<% end %>

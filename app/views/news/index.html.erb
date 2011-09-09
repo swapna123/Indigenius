@@ -1,0 +1,27 @@
+<div id='content'>
+  <div id='content-inner'>
+
+<h1>Listing News And Updates</h1>
+
+<table >
+  <tr>
+    <th align="left"><h4>Content</h4></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @news.each do |news| %>
+  <tr>
+    <td><%= news.content %></td>
+    <td><%= link_to 'Show', news %></td>
+    <td><%= link_to 'Edit', edit_news_path(news) %></td>
+    <td><%= link_to 'Destroy', news, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Update', new_news_path %>
+</div></div>

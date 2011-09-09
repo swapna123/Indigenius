@@ -1,0 +1,8 @@
+<div id='content'>
+  <div id='content-inner'>
+<%= form_for(:testimonial,:url => {:action => "create"}) do |f|%>
+  <%= f.label :CilentWord %>
+  <%= f.text_field :clientword %><br/>
+  <%= f.submit  %><br /></br />
+<% end %>
+<%= link_to 'Back', testimonials_path %></div></div>
